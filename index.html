@@ -2,6 +2,7 @@
 <!-- https://www.w3schools.com/code/tryit.asp?filename=G68VMFWS12UH -->
 <html>
 <head>
+<link rel="stylesheet" href="styles.css">
 <style>
 /* chrome scrollbars */
 textarea::-webkit-scrollbar 
@@ -31,7 +32,23 @@ textarea::-webkit-scrollbar-thumb
 </head>
 <body bgcolor="#FFFFFF">
 
-<script>
+
+<div class="conti">
+	<div class="assignmentcontainer">
+		<div class="head">Assignments</div>
+		<div class="head">Assignments</div>
+		<div class="head">Assignments</div>
+	</div>
+	<div class="filecontainer">
+		<div class="head">Files</div>
+	</div>
+	<div class="rightcontainer" id="head">
+		<div class="head">File</div>
+	</div>
+</div>
+
+
+<script type ="text/javascript">
   
 //
 // desc: demonstrates textarea line numbers using canvas paint 
@@ -129,9 +146,10 @@ var cssTable = 'padding:0px 0px 0px 0px!important; margin:0px 0px 0px 0px!import
       ta.onmouseup    = function(ev){ this.mouseisdown=false; this.paintLineNumbers(); };
       ta.onmousemove  = function(ev){ if (this.mouseisdown) this.paintLineNumbers(); };
       
-
-	document.body.appendChild(div);
-    // make sure it's painted
+	//append it somewhere else
+	//document.body.appendChild(div);
+	document.getElementById("head").appendChild(div);
+	// make sure it's painted
 	ta.paintLineNumbers();
     return ta;
 };
@@ -139,5 +157,6 @@ var cssTable = 'padding:0px 0px 0px 0px!important; margin:0px 0px 0px 0px!import
 var ta = TextAreaLineNumbersWithCanvas();
 	ta.value = "";
 </script>
+
 
 </body>
