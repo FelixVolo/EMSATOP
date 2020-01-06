@@ -104,25 +104,26 @@ input[type=password], select {
 
 .yourmessage {
     flex-wrap: wrap;
-    word-wrap: break-word
+    word-wrap: break-word;
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 6px;
-    display: flex;
+    display: wrap;
     justify-content: center;
     width: 70%;
     background-color: #3C7367;
     color: #f1f1f1;
+    
     align-self: flex-end;
 }
 
 .othermessage {
     flex-wrap: wrap;
-    word-wrap: break-word
+    word-wrap: break-word;
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 6px;
-    display: flex;
+    display: wrap;
     justify-content: center;
     width: 70%;
     background-color: #673C73;
