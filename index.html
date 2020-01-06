@@ -49,8 +49,10 @@ textarea::-webkit-scrollbar-thumb
 		
 	</div>
 	<div class="rightcontainer" id="head">
-		<div class="head" id="headtext">File</div>
-		
+		<div class="conti">
+			<div class="head1" id="headtext">File</div>
+			<div class="head2" id="headtext">Tutor Urt in deinem Chat.</div>
+		</div>
 		<div class="messengercontainer" id="messenger">
 			<div class="messagecontainer" id="messages">
 			<!-- This is the place messages go in! -->
@@ -77,12 +79,13 @@ function sendmessage()
 	var text = document.getElementById("message");
 	var yourmessage = document.createElement('div');
     yourmessage.className = 'yourmessage';
-    yourmessage.innerHTML = text.value;
+    yourmessage.innerHTML = "Sie: " + text.value;
     e.appendChild(yourmessage);
 	var othermessage = document.createElement('div');
     othermessage.className = 'othermessage';
-    othermessage.innerHTML = "Dies ist eine automatisch generierte Antwort.";
+    othermessage.innerHTML = "Tutor Urt: Dies ist eine automatisch generierte Antwort.";
 	e.appendChild(othermessage);
+	text.value = "";
 }
 
 function fileinput()

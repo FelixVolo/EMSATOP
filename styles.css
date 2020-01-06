@@ -44,7 +44,7 @@ input[type=password], select {
     margin-bottom: 6px;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 40%;
     background-color: #00519e;
     color: #f1f1f1;
 }
@@ -201,6 +201,32 @@ h1 {
     justify-content: left;
     width: 100%;
     background-color: #00519e;
+    color: #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.head1 {
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: left;
+    width: 80%;
+    background-color: #00519e;
+    color: #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.head2 {
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: right;
+    width: 20%;
+    background-color: #FF0000;
     color: #f1f1f1;
     box-sizing: border-box;
     border-radius: 25px;
