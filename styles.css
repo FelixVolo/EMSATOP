@@ -1,3 +1,5 @@
+/*login*/
+
 .logincontainer {
   height: 100%;
   display: flex;
@@ -6,6 +8,56 @@
   overflow:hidden;
 }
 
+.loginsquare {
+  background-color: #F2F2F2;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+
+input[type=text], select {
+  flex-wrap: wrap;
+  display: flex;
+  flex: 80%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+input[type=password], select {
+  display: flex;
+  flex: 80%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.login {
+    
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background-color: #00519e;
+    color: #f1f1f1;
+}
+
+.login:hover {
+    background-color: #4f99df;
+    cursor: pointer;
+}
+
+
+/*login*/
+
+/*Chat*/
 .textboxcontainer {
   height: 35%;
   display: flex;
@@ -22,6 +74,64 @@
   flex-direction: row;
   overflow:hidden;
 }
+
+.messagecontainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow:auto;
+  align-self: flex-start;
+}
+
+.send {
+    padding: 14px;
+    margin-top: 14px;
+    
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-color: #00519e;
+    color: #f1f1f1;
+    flex-wrap: wrap;
+}
+
+.send:hover {
+    background-color: #4f99df;
+    cursor: pointer;
+}
+
+.yourmessage {
+    word-wrap: break-word
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    background-color: #3C7367;
+    color: #f1f1f1;
+    align-self: flex-end;
+}
+
+.othermessage {
+    word-wrap: break-word
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    background-color: #673C73;
+    color: #f1f1f1;
+    align-self: flex-start;
+}
+
+/*Chat*/
+
+
+
 
 .conti {
   height: 100%;
@@ -62,15 +172,7 @@
   align-self: flex-start;
 }
 
-.messagecontainer {
-  height: 300px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  overflow:hidden;
-  align-self: flex-start;
-}
+
 
 .buttoncontainer {
   height: 30%;
@@ -81,34 +183,7 @@
   align-content: center;
 }
 
-.loginsquare {
-  background-color: #F2F2F2;
-  width: 600px;
-  height: 300px;
-  border-radius: 20px;
-}
 
-
-input[type=text], select {
-  flex-wrap: wrap;
-  display: flex;
-  flex: 80%;
-  padding: 12px 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  margin-top: 20px;
-}
-
-input[type=password], select {
-  display: flex;
-  flex: 80%;
-  padding: 12px 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  margin-top: 20px;
-}
 
 h1 {
   text-align: center;
@@ -166,55 +241,53 @@ h1 {
     cursor: pointer;
 }
 
-.login {
-    
-    padding: 8px;
+
+
+/*index obere leiste*/
+
+.headtopone {
+    padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
     display: flex;
-    justify-content: center;
-    width: 80%;
+    justify-content: left;
+    width: 60%;
     background-color: #00519e;
     color: #f1f1f1;
+    box-sizing: border-box;
 }
 
-.login:hover {
-    background-color: #4f99df;
-    cursor: pointer;
+.headtoptwo {
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: left;
+    width: 20%;
+    background-color: #00519e;
+    color: #f1f1f1;
+    box-sizing: border-box;
 }
 
-
-.send {
-    padding: 8px;
+.headtopthree {
+    padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
     display: flex;
     justify-content: center;
     width: 20%;
-    background-color: #00519e;
+    background-color: #FF0000;
     color: #f1f1f1;
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-radius: 25px;
 }
 
-.send:hover {
-    background-color: #4f99df;
+.headtopthree:hover {
+    background-color: #CC0000;
     cursor: pointer;
 }
 
-.codebox {
-        /* Below are styles for the codebox (not the code itself) */
-        border:1px solid black;
-        background-color:#EEEEFF;
-        width:300px;
-        overflow:auto;    
-        padding:10px;
-}
-
-.codebox code {
-        /* Styles in here affect the text of the codebox */
-        font-size:0.9em;
-        /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
-}
+/*index obere leiste*/
 
 label {
   margin-top: 20px;

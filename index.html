@@ -32,6 +32,11 @@ textarea::-webkit-scrollbar-thumb
 </head>
 <body bgcolor="#FFFFFF">
 
+<div class="conti">
+	<div class="headtopone">Online Tutor System Programmieren 1</div>
+	<div class="headtoptwo">Willkommen, Max Mustermann</div>
+	<div class="headtopthree" onclick="location.href = 'login.html'">Logout</div>
+</div>
 
 <div class="conti">
 	<div class="assignmentcontainer">
@@ -47,11 +52,14 @@ textarea::-webkit-scrollbar-thumb
 		<div class="head" id="headtext">File</div>
 		
 		<div class="messengercontainer" id="messenger">
-			<div class="messagecontainer" id="messages"><!-- This is the place messages go in! --></div>
+			<div class="messagecontainer" id="messages">
+			<!-- This is the place messages go in! -->
+			
+			</div>
 		</div>
 		<div class="messengercontainer">
 			<input type="text" id="message" name="messagetext" placeholder="Write a message ...">
-			<div class="send" onclick="">send</div>
+			<div class="send" onclick="sendmessage()">send</div>
 		</div>
 	</div>
 </div>
@@ -62,6 +70,20 @@ textarea::-webkit-scrollbar-thumb
 // desc: demonstrates textarea line numbers using canvas paint 
 // auth: nikola bozovic <nigerija@gmail>
 //
+
+function sendmessage()
+{
+	var e = document.getElementById("messages");
+	var text = document.getElementById("message");
+	var yourmessage = document.createElement('div');
+    yourmessage.className = 'yourmessage';
+    yourmessage.innerHTML = text.value;
+    e.appendChild(yourmessage);
+	var othermessage = document.createElement('div');
+    othermessage.className = 'othermessage';
+    othermessage.innerHTML = "Dies ist eine automatisch generierte Antwort.";
+	e.appendChild(othermessage);
+}
 
 function fileinput()
 {
