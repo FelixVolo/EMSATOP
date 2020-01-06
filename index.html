@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- https://www.w3schools.com/code/tryit.asp?filename=G68VMFWS12UH -->
+<!--Code Editor: https://www.w3schools.com/code/tryit.asp?filename=G68VMFWS12UH -->
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
@@ -36,17 +36,25 @@ textarea::-webkit-scrollbar-thumb
 <div class="conti">
 	<div class="assignmentcontainer">
 		<div class="head">Assignments</div>
-		<div class="head">Assignments</div>
-		<div class="head">Assignments</div>
+		<div class="headbutton" onclick="loadfiles(1)">Assignment 1</div>
+		<div class="headbutton" onclick="loadfiles(2)">Assignment 2</div>
 	</div>
-	<div class="filecontainer">
+	<div class="filecontainer" id="filehead">
 		<div class="head">Files</div>
+		
 	</div>
 	<div class="rightcontainer" id="head">
-		<div class="head">File</div>
+		<div class="head" id="headtext">File</div>
+		
+		<div class="messengercontainer" id="messenger">
+			<div class="messagecontainer" id="messages"><!-- This is the place messages go in! --></div>
+		</div>
+		<div class="messengercontainer">
+			<input type="text" id="message" name="messagetext" placeholder="Write a message ...">
+			<div class="send" onclick="">send</div>
+		</div>
 	</div>
 </div>
-
 
 <script type ="text/javascript">
   
@@ -55,6 +63,67 @@ textarea::-webkit-scrollbar-thumb
 // auth: nikola bozovic <nigerija@gmail>
 //
 
+function fileinput()
+{
+	var input = document.createElement('input');
+	input.type = 'file';
+	input.click();
+	//if (input.value) {
+	//	  window.alert(input.value);
+    //}
+    //window.alert(r.readAsText(input));
+}
+
+
+function loadfiles(a)
+{
+	var e = document.getElementById("filehead"); 
+    var child = e.lastElementChild;  
+    while (child) 
+	{ 
+		e.removeChild(child); 
+		child = e.lastElementChild; 
+	}
+	var newNode = document.createElement('div');
+    newNode.className = 'head';
+    newNode.innerHTML = 'Files';
+    document.getElementById('filehead').appendChild(newNode); 
+	if (a == 1)
+	{
+		var newNode = document.createElement('div');
+		newNode.className = 'headbutton';
+		newNode.innerHTML = 'File A1';
+		newNode.onclick = function() 
+		{
+			ta.value = "int main()\n{\n\tprintf(\"Hello World\\n\");\n\treturn 0;\n}";
+			document.getElementById('headtext').innerHTML = "File A1";
+		};
+		document.getElementById('filehead').appendChild(newNode);
+		
+		var addfile = document.createElement('div');
+		addfile.className = 'addfile';
+		addfile.innerHTML = '+ File';
+		addfile.onclick = function(){ fileinput(); }
+		document.getElementById('filehead').appendChild(addfile);
+	}
+	else if (a == 2)
+	{
+		var newNode = document.createElement('div');
+		newNode.className = 'headbutton';
+		newNode.innerHTML = 'File A2';
+		newNode.onclick = function() 
+		{
+			ta.value = "int main()\n{\n\tprintf(\"I was too lazy to write anything else.\\n\");\n\treturn 0;\n}";
+			document.getElementById('headtext').innerHTML = "File A2";
+		};
+		document.getElementById('filehead').appendChild(newNode);
+		var addfile = document.createElement('div');
+		addfile.className = 'addfile';
+		addfile.innerHTML = '+ File';
+		addfile.onclick = function(){ fileinput(); }
+		document.getElementById('filehead').appendChild(addfile);
+	}
+}
 
 var TextAreaLineNumbersWithCanvas = function()
 {
@@ -86,6 +155,7 @@ var cssTable = 'padding:0px 0px 0px 0px!important; margin:0px 0px 0px 0px!import
                        + 'scrollbar-highlight-color: #666;' /* inner light */
                        + 'scrollbar-darkshadow-color: #444;' /* outer dark */
                        + 'scrollbar-shadow-color: #222;' /* inner dark */
+					   + 'display: flex;'
                        ;
 
       // LAYOUT (table 2 panels)
@@ -146,9 +216,7 @@ var cssTable = 'padding:0px 0px 0px 0px!important; margin:0px 0px 0px 0px!import
       ta.onmouseup    = function(ev){ this.mouseisdown=false; this.paintLineNumbers(); };
       ta.onmousemove  = function(ev){ if (this.mouseisdown) this.paintLineNumbers(); };
       
-	//append it somewhere else
-	//document.body.appendChild(div);
-	document.getElementById("head").appendChild(div);
+	document.getElementById("head").insertBefore(div, document.getElementById("messenger"));
 	// make sure it's painted
 	ta.paintLineNumbers();
     return ta;
