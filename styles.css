@@ -103,6 +103,7 @@ input[type=password], select {
 }
 
 .yourmessage {
+    flex-wrap: wrap;
     word-wrap: break-word
     padding: 8px;
     margin-top: 6px;
@@ -116,6 +117,7 @@ input[type=password], select {
 }
 
 .othermessage {
+    flex-wrap: wrap;
     word-wrap: break-word
     padding: 8px;
     margin-top: 6px;
