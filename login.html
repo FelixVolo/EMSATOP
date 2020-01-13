@@ -20,10 +20,29 @@
 			<input type="password" id="password" name="passtext" value="thistextishidden">
 		</div>
 		<div class="buttoncontainer">
-			<div class="login" onclick="location.href = 'index.html'">Login</div>
+			<div class="login" id="login" onclick="location.href = 'index.html'">Login</div>
 			<div class="login" onclick="location.href = 'index.html'">Login mit WebSSO</div>
 		</div>
 	</div>
 </div>
+<script>
+//Enter bei E-Mail
+var input = document.getElementById("email");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("login").click();
+  }
+});
+//Enter bei Passwort
+var input = document.getElementById("password");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("login").click();
+  }
+});
+</script>
+
 </body>
 </html>
